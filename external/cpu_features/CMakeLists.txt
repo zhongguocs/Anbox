@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.0)
 project(CpuFeatures VERSION 0.1.0)
 
 # ANBOX allow to build in our more strict build environment
-set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-error=switch-default -Wno-error=unused-parameter -Wno-error=overflow")
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-error=switch-default -Wno-error=unused-parameter -Wno-error=overflow -Wno-error=pedantic")
 
 if("${CMAKE_C_COMPILER_ID}" STREQUAL "Clang")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Wno-error=cast-align")

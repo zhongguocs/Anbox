@@ -102,8 +102,9 @@ anbox::cmds::CheckFeatures::CheckFeatures()
 
     return EXIT_SUCCESS;
 #else
-    std::cerr << "You're running Anbox on a not yet supported architecture" << std::endl;
-    return EXIT_FAILURE;
+    std::cerr << "You're running Anbox on a not yet supported architecture arm64" << std::endl;
+    return EXIT_SUCCESS;
+    //return EXIT_FAILURE;
 #endif
   });
 }

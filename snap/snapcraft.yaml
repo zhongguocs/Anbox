@@ -13,7 +13,7 @@ description: |
   separate the Android system fully from the host.
 confinement: devmode
 grade: devel
-architectures: [amd64]
+architectures: [arm64]
 
 slots:
   dbus-session-slot:
@@ -278,6 +278,7 @@ parts:
       - libboost-thread-dev
       - libcap-dev
       - libdbus-1-dev
+      - libdw-dev
       - libegl1-mesa-dev
       - libgles2-mesa-dev
       - libgtest-dev
@@ -294,6 +295,8 @@ parts:
       - libboost-program-options1.58.0
       - libboost-thread1.58.0
       - libdb5.3
+      - libdw1
+      - libprotobuf-lite9v5
       - libegl1-mesa
       - libgles2-mesa
       - libgl1-mesa-glx
@@ -301,7 +304,30 @@ parts:
       - libsdl2-gfx-1.0-0
       - libsdl2-image-2.0-0
       - libsystemd0
+      - libblkid1
+      - libmount1
+      - libpcre3
+      - libselinux1
+      - libuuid1
+      - zlib1g
+      - libseccomp2
+      - libcap2
+      - libgnutls30
+      - libhogweed4
+      - libidn2-0
+      - libnettle6
+      - libp11-kit0
+      - libtasn1-6
+      - libunistring0
+      - libbz2-1.0
+      - libgcc1
+      - libgcrypt20
+      - libgpg-error0
+      - liblzma5
+      - libtinfo5
+      - libstdc++6
+      - libncursesw5
     prime:
       - usr/bin/anbox
       - usr/share/anbox
-      - usr/lib/*-linux-*/
+      - usr/lib/aarch64-linux-gnu/
