@@ -60,6 +60,8 @@ bool anbox::cmds::Launch::launch_session_manager() {
   const auto should_force_software_rendering = utils::get_env_value("ANBOX_FORCE_SOFTWARE_RENDERING", "false");
   if (should_force_software_rendering == "true")
     args.push_back("--software-rendering");
+  
+  args.push_back("--single-window");
 
   std::map<std::string,std::string> env;
   core::posix::this_process::env::for_each([&](const std::string &name, const std::string &value) {
